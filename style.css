@@ -1,0 +1,189 @@
+@import url("https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-family: "Gochi Hand", cursive;
+}
+
+.main {
+  width: 100%;
+  min-height: 100vh;
+  background-color: rgb(44, 44, 44);
+  background-image: linear-gradient(150deg, #153677, #4e085f);
+  padding: 10px;
+}
+
+.container {
+  width: 100%;
+  max-width: 500px;
+  background-color: #fff;
+  border-radius: 1rem;
+  padding: 1rem;
+  margin: 200px auto 20px;
+  background-image: radial-gradient(#bfc0c1 10%, transparent 0);
+  background-size: 25px 25px;
+}
+
+.heading {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.heading img {
+  width: 60px;
+}
+
+.heading h2 {
+  transform: rotate(3deg);
+  padding: 0.2rem 1.2rem;
+  border-radius: 20% 5% 20% 5%/15% 20% 25% 20%;
+  background-color: #00ba00;
+  font-size: 2rem;
+}
+
+.form-label {
+  display: block;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.input-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 0 1rem;
+  flex-wrap: wrap;
+}
+
+.form-input {
+  box-sizing: border-box;
+  /* width: 100%; */
+  height: 40px;
+  flex: 1;
+  padding-left: 20px;
+  margin: 1rem 0;
+  outline: none;
+  border: none;
+  font-family: "Gochi Hand", cursive;
+  font-size: 1rem;
+  background-color: transparent;
+  border-bottom: 3px dashed black;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.form-input:focus {
+  border: 3px dashed black;
+  border-radius: 0.3rem;
+}
+
+.btn {
+  padding: 0;
+  border: none;
+  cursor: pointer;
+  transform: rotate(4deg);
+  transform-origin: center;
+  font-family: "Gochi Hand", cursive;
+  text-decoration: none;
+  padding-bottom: 4px;
+  border-radius: 5px;
+  background-color: #00ba00;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.btn span {
+  background: #f1f5f8;
+  display: block;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  border: 2px solid #494a4b;
+}
+
+.btn:active {
+  transform: translateY(4px);
+  padding-bottom: 0px;
+  outline: 0;
+}
+
+@media only screen and (max-width: 500px) {
+  .input-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+    padding: 0 1rem;
+  }
+
+  .form-input {
+    width: 100%;
+    height: 70px;
+    padding: 0.6rem;
+    padding-left: 20px;
+    margin: 1.5rem 0 0;
+  }
+}
+
+ul li {
+  list-style: none;
+  font-size: 1.2rem;
+  padding: 0.2rem 1rem 0.2rem 2.5rem;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  position: relative;
+}
+
+ul li::before {
+  content: "";
+  width: 1rem;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-image: url(./images/unchecked.png);
+  background-size: cover;
+}
+
+ul li.completed {
+  color: #717171;
+  text-decoration: line-through;
+}
+
+ul li.completed::before {
+  background-image: url(./images/checked.png);
+}
+
+ul li span {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 13px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+ul li span:hover {
+  background-color: #edeef0;
+}
+
+.delete {
+  cursor: pointer;
+}

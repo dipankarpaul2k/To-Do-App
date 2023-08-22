@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To-Do App</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="main">
+      <div class="container">
+        <div class="heading">
+          <img src="./images/to-do-list.png"/>
+          <h2>To-Do List</h2>
+        </div>
+        <p class="form-label">~ Today I need to ~</p>
+        <div class="input-container">
+          <input
+            class="form-input"
+            type="text"
+            id="todo"
+            placeholder="Add your task"
+            autocomplete="off"
+          />
+          <button id="submitButton" class="btn">
+            <span>Submit</span>
+          </button>
+        </div>
+        <div>
+          <ul class="toDoList" id="toDoList">
+            <!-- <li class="completed">task1</li>
+            <li>task2</li> -->
+          </ul>
+        </div>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
